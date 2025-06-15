@@ -32,6 +32,8 @@ import Dart from "../data/language/dart.svg";
 import Python from "../data/language/python.svg";
 import C from "../data/language/c.svg";
 
+import Logo from "../../public/logo.png";
+
 const languages = [
   {
     value: "javascript",
@@ -294,10 +296,13 @@ export default function CodeCompiler() {
       >
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <Code2 className="h-6 w-6 text-blue-500" />
-            <h1 className="text-xl md:text-2xl font-bold">
-              PolyCode AI Compiler
-            </h1>
+            <img 
+              src={Logo.src} 
+              alt="PolyCode Logo" 
+              className="h-12 w-20 object-contain" 
+              style={{ filter: isDarkMode ? 'invert(1)' : 'none' }}
+            />
+            <h1 className="text-xl md:text-2xl font-bold">PolyCode AI</h1>
           </div>
           <div className="hidden sm:flex items-center gap-2 text-sm text-gray-500">
             <Terminal className="h-4 w-4" />
